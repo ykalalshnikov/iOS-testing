@@ -33,7 +33,7 @@ class MainPage {
     
     func isMainPageExist() -> Bool {
         /**
-         
+         Check that Main Page titles exists
          */
         let isTitleAndStubExists =  (title.exists) && (textStub.exists)
         return isTitleAndStubExists
@@ -42,21 +42,21 @@ class MainPage {
     
     func openSettings() {
         /**
-         
+         Tap on settings button
          */
         settingsButton.tap()
     }
     
     func openAddPlayer() {
         /**
-         
+         Tap on add player button
          */
         addPlayerButton.tap()
     }
     
     func isPlayerExist(name: String, balance: String, currency: String) -> Bool {
         /**
-         
+         Check that plyer with given params(name, balance, currency) exists
          */
         let player = collectionViews.containing(.staticText, identifier:name).staticTexts["\(currency)\(balance)"]
         
@@ -65,7 +65,7 @@ class MainPage {
     
     func replacePlayers(playerOneName: String, playerTwoName: String){
         /**
-         
+         Replace players on the screen
          */
         let playerOne = app.staticTexts[playerOneName]
         let playerTwo = app.staticTexts[playerTwoName]
@@ -75,7 +75,7 @@ class MainPage {
     
     func transferMoney(playerOneName: String, playerTwoName: String, sum: String) {
         /**
-         
+         Transfer money from one player to another
          */
         let playerOne = app.staticTexts[playerOneName]
         let playerTwo = app.staticTexts[playerTwoName]
@@ -87,7 +87,7 @@ class MainPage {
     
     func selectPlayer(playerName: String) {
         /**
-         
+         Tap on player for next actions
          */
         let player = app.staticTexts[playerName].firstMatch
         player.tap()
@@ -95,7 +95,7 @@ class MainPage {
     
     func actionOnPlayer(action: String, name: String="") {
         /**
-         
+         Actions on player(delete, rename, add money)
          */
         if action == "delete" {
             deleteButton.tap()}
@@ -111,7 +111,7 @@ class MainPage {
     
     func returnPlayerPosition (name: String) -> CGRect  {
         /**
-         
+         Get player position on the screen
          */
         let player = app.staticTexts[name]
         let position = player.frame

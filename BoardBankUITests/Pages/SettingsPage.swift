@@ -21,7 +21,7 @@ class SettingsPage {
     
     func newGame() {
         /**
-         
+         Set new game in settings
          */
         newGameButton.tap()
         allertNewGameButton.tap()
@@ -29,7 +29,7 @@ class SettingsPage {
     
     func cancelOnSettingsPage() {
         /**
-         
+         Tap on cancel button
          */
         cancelButton.tap()
     }

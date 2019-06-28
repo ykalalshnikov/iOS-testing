@@ -24,28 +24,28 @@ class AddPlayerPage {
     
     func fillName(name: String) {
         /**
-         
+         Fill player name
          */
         textFieldPlayer.typeText(name)
     }
     
     func fillBalance(balance: String) {
         /**
-         
+         Fill player balance
          */
         textFieldBalance.typeText(balance)
     }
     
     func addPlayer() {
         /**
-         
+         Tap on add player button
          */
         addPlayerButton.tap()
     }
     
     func setPlayerImageWith(image: String)  {
         /**
-         
+         Choose the image for player
          */
         let imageSelectorLocator = tableIcons.containing(.image, identifier:image).element
         imageSelectorLocator.tap()
@@ -53,7 +53,7 @@ class AddPlayerPage {
     
     func cancelOnAddplayerPage() {
         /**
-         
+         Tap on cancel button
          */
         cancelButton.tap()
     }

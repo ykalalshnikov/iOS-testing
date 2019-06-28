@@ -49,22 +49,23 @@ class BoardBankUITests: XCTestCase {
         XCUIApplication().terminate()
     }
     
+    
     // Tests
     
     func testAddPlayer() {
         /**
-         
+         Add player and check that player created
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
         addPlayerPage.addPlayer()
         let isPlayerExist = mainPage.isPlayerExist(name: player1Name, balance: defaultPlayerBalance, currency: defaultCurrency)
-        XCTAssertTrue(isPlayerExist, "Player does not exist")
+        XCTAssertTrue(isPlayerExist, "Player is not exist")
     }
     
     func testRenamePlayer() {
         /**
-         
+         Rename player and check that name changed
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
@@ -72,12 +73,12 @@ class BoardBankUITests: XCTestCase {
         mainPage.selectPlayer(playerName: player1Name)
         mainPage.actionOnPlayer(action: "rename", name: player1NewName)
         let isRenamedPlayerExist = mainPage.isPlayerExist(name: player1NewName, balance: defaultPlayerBalance, currency: defaultCurrency)
-        XCTAssertTrue(isRenamedPlayerExist, "Renamed player does not exist")
+        XCTAssertTrue(isRenamedPlayerExist, "Renamed player is not exist")
     }
     
     func testAddMoney() {
         /**
-         
+         Add money to player and check that money added
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
@@ -85,12 +86,12 @@ class BoardBankUITests: XCTestCase {
         mainPage.selectPlayer(playerName: player1Name)
         mainPage.actionOnPlayer(action: "add")
         let isPlayerWithAddedMoneyExist = mainPage.isPlayerExist(name: player1Name, balance: playerBalanceAfterAdd, currency: defaultCurrency)
-        XCTAssertTrue(isPlayerWithAddedMoneyExist, "Player with added money does not exist")
+        XCTAssertTrue(isPlayerWithAddedMoneyExist, "Player with added money is not exist")
     }
     
     func testDeletePlayer() {
         /**
-         
+         Delete player and check that player deleted
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
@@ -103,7 +104,7 @@ class BoardBankUITests: XCTestCase {
     
     func testReplacePlayers() {
         /**
-         
+         Replace players positions and check it
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
@@ -116,13 +117,13 @@ class BoardBankUITests: XCTestCase {
         mainPage.replacePlayers(playerOneName: player1Name, playerTwoName: player2Name)
         let positionPlayer1After = mainPage.returnPlayerPosition(name: player1Name)
         let positionPlayer2After = mainPage.returnPlayerPosition(name: player2Name)
-        XCTAssertTrue(positionPlayer1After == positionPlayer2Before, "Player1 does not replaced with Player2")
-        XCTAssertTrue(positionPlayer2After == positionPlayer1Before, "Player2 does not replaced with Player1")
+        XCTAssertTrue(positionPlayer1After == positionPlayer2Before, "Player1 does is replaced with Player2")
+        XCTAssertTrue(positionPlayer2After == positionPlayer1Before, "Player2 does is replaced with Player1")
     }
     
     func testTransferMoney() {
         /**
-         
+         Trnasfer money from player to another and check that it transfered
          */
         mainPage.openAddPlayer()
         addPlayerPage.fillName(name: player1Name)
@@ -132,14 +133,14 @@ class BoardBankUITests: XCTestCase {
         addPlayerPage.addPlayer()
         mainPage.transferMoney(playerOneName: player1Name, playerTwoName: player2Name, sum: transferSum )
         let player1 = mainPage.isPlayerExist(name: player1Name, balance: player1BalanceAfterTransfer, currency: defaultCurrency)
-        XCTAssertTrue(player1, "Player1 money do not transfered")
+        XCTAssertTrue(player1, "Player1 money is not transfered")
         let player2 = mainPage.isPlayerExist(name: player2Name, balance: player2BalanceAfterTransfer, currency: defaultCurrency)
-        XCTAssertTrue(player2, "Player2 money do not transfered")
+        XCTAssertTrue(player2, "Player2 money is not transfered")
     }
     
     func testMaxPlayers() {
         /**
-         
+         Check that add player button is disabled when count of players more than 6
          */
         for _ in (1...6) {
             mainPage.openAddPlayer()
@@ -150,22 +151,22 @@ class BoardBankUITests: XCTestCase {
     
     func testNavigationToMainPageFromSettingsPage() {
         /**
-         
+         Go to settings and the go back to Main Page
          */
         mainPage.openSettings()
         settingPage.cancelOnSettingsPage()
         let isMainPage = mainPage.isMainPageExist()
-        XCTAssertTrue(isMainPage, "Main Page do not opened")
+        XCTAssertTrue(isMainPage, "Main page is not open")
     }
     
     func testNavigationToMainPageFromAddPLayerPage() {
         /**
-         
+         Go to Add player Page and the go back to Main Page
          */
         mainPage.openAddPlayer()
         addPlayerPage.cancelOnAddplayerPage()
         let isMainPage = mainPage.isMainPageExist()
-        XCTAssertTrue(isMainPage, "Main Page do not opened")
+        XCTAssertTrue(isMainPage, "Main page is not open")
     }
     
 }
