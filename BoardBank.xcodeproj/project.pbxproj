@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001544E422C61E660051A8AC /* BoardBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001544E322C61E660051A8AC /* BoardBankUITests.swift */; };
+		001544ED22C61EA60051A8AC /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001544EC22C61EA60051A8AC /* MainPage.swift */; };
+		001544EF22C61EB70051A8AC /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001544EE22C61EB70051A8AC /* SettingsPage.swift */; };
+		001544F122C61ECD0051A8AC /* AddPlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001544F022C61ECD0051A8AC /* AddPlayerPage.swift */; };
 		792B193C1E1C0D20003F991D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792B193B1E1C0D1F003F991D /* Player.swift */; };
 		792B19401E1C17C8003F991D /* BankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792B193F1E1C17C8003F991D /* BankManager.swift */; };
 		792B19421E1C19AB003F991D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792B19411E1C19AB003F991D /* Token.swift */; };
@@ -23,7 +27,23 @@
 		79ED560D1E1C53EC006247D2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ED560C1E1C53EC006247D2 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		001544E622C61E660051A8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79B78BEE1E17E00900181778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79B78BF51E17E00900181778;
+			remoteInfo = BoardBank;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		001544E122C61E660051A8AC /* BoardBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		001544E322C61E660051A8AC /* BoardBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBankUITests.swift; sourceTree = "<group>"; };
+		001544E522C61E660051A8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		001544EC22C61EA60051A8AC /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		001544EE22C61EB70051A8AC /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		001544F022C61ECD0051A8AC /* AddPlayerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerPage.swift; sourceTree = "<group>"; };
 		792B193B1E1C0D1F003F991D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		792B193F1E1C17C8003F991D /* BankManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankManager.swift; sourceTree = "<group>"; };
 		792B19411E1C19AB003F991D /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -43,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		001544DE22C61E660051A8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B78BF31E17E00900181778 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001544E222C61E660051A8AC /* BoardBankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				001544EB22C61E720051A8AC /* Pages */,
+				001544E322C61E660051A8AC /* BoardBankUITests.swift */,
+				001544E522C61E660051A8AC /* Info.plist */,
+			);
+			path = BoardBankUITests;
+			sourceTree = "<group>";
+		};
+		001544EB22C61E720051A8AC /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				001544EC22C61EA60051A8AC /* MainPage.swift */,
+				001544EE22C61EB70051A8AC /* SettingsPage.swift */,
+				001544F022C61ECD0051A8AC /* AddPlayerPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		79B78BED1E17E00900181778 = {
 			isa = PBXGroup;
 			children = (
 				79B78BF81E17E00900181778 /* BoardBank */,
+				001544E222C61E660051A8AC /* BoardBankUITests */,
 				79B78BF71E17E00900181778 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				79B78BF61E17E00900181778 /* BoardBank.app */,
+				001544E122C61E660051A8AC /* BoardBankUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +144,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		001544E022C61E660051A8AC /* BoardBankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 001544EA22C61E660051A8AC /* Build configuration list for PBXNativeTarget "BoardBankUITests" */;
+			buildPhases = (
+				001544DD22C61E660051A8AC /* Sources */,
+				001544DE22C61E660051A8AC /* Frameworks */,
+				001544DF22C61E660051A8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				001544E722C61E660051A8AC /* PBXTargetDependency */,
+			);
+			name = BoardBankUITests;
+			productName = BoardBankUITests;
+			productReference = 001544E122C61E660051A8AC /* BoardBankUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		79B78BF51E17E00900181778 /* BoardBank */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79B78C081E17E00900181778 /* Build configuration list for PBXNativeTarget "BoardBank" */;
@@ -119,10 +186,15 @@
 		79B78BEE1E17E00900181778 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Richard Neitzke";
 				TargetAttributes = {
+					001544E022C61E660051A8AC = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 79B78BF51E17E00900181778;
+					};
 					79B78BF51E17E00900181778 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = T4S6DK3YY2;
@@ -143,11 +215,19 @@
 			projectRoot = "";
 			targets = (
 				79B78BF51E17E00900181778 /* BoardBank */,
+				001544E022C61E660051A8AC /* BoardBankUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		001544DF22C61E660051A8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B78BF41E17E00900181778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +258,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		001544DD22C61E660051A8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001544EF22C61EB70051A8AC /* SettingsPage.swift in Sources */,
+				001544F122C61ECD0051A8AC /* AddPlayerPage.swift in Sources */,
+				001544E422C61E660051A8AC /* BoardBankUITests.swift in Sources */,
+				001544ED22C61EA60051A8AC /* MainPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B78BF21E17E00900181778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +287,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		001544E722C61E660051A8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79B78BF51E17E00900181778 /* BoardBank */;
+			targetProxy = 001544E622C61E660051A8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		79B78BFD1E17E00900181778 /* Main.storyboard */ = {
@@ -217,6 +316,67 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		001544E822C61E660051A8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BoardBankUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = self.BoardBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoardBank;
+			};
+			name = Debug;
+		};
+		001544E922C61E660051A8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BoardBankUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = self.BoardBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoardBank;
+			};
+			name = Release;
+		};
 		79B78C061E17E00900181778 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +509,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		001544EA22C61E660051A8AC /* Build configuration list for PBXNativeTarget "BoardBankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001544E822C61E660051A8AC /* Debug */,
+				001544E922C61E660051A8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79B78BF11E17E00900181778 /* Build configuration list for PBXProject "BoardBank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
